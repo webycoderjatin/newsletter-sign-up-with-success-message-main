@@ -40,14 +40,27 @@
       </ul>
 
       <div class="input">
+        <span>
         <p>Email Address</p>
-        <input type="email" name="" id="">
+        <p style="display: none;" id="isError">Valid Email Required</p>
+        </span>
+        <input type="email" name="" id="email" placeholder="email@company.com">
       </div>
+      <button id="snd" onclick="send()">Subscribe to monthly newsletter</button>
 
     </div>
     <div class="img">
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class="mobile-img">
       <img src="assets/images/illustration-sign-up-desktop.svg" alt="">
     </div>
   </div>
+
+  <div class="container-success" style="display: none;">
+    <img src="assets/images/icon-success.svg" alt="icon-success">
+    <h1>Thanks for<br>Subscribing!</h1>
+    <p>A confirmation link has been sent to<br><span class="email-inputed">jotinrai106@gmail.com</span>. Please open it and click<br>the button inside to confirm your subscription.</p>
+    <button>Dismiss message</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

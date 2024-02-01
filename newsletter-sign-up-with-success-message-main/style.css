@@ -46,11 +46,65 @@ body{
     padding: 50px;
 }
 
-.container .txt .input p{
-    padding-bottom: 10px;
+.container .txt .input span{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
     font-size: 14px;
     font-weight: 700;
+    padding-top: 20px;
 }
+
+.container .txt .input span p{
+    font-weight: 700;
+    padding-bottom: 10px !important;
+    background-color: white;
+}
+
+.container .txt .input input:focus{
+    border-color: hsl(235, 18%, 26%);
+}
+
+#snd{
+    width: 100%;
+    margin: 20px 0px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 13px 0px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(234, 29%, 20%);
+}
+
+#snd:hover{
+
+    background-image: linear-gradient(45deg , #FF5771, #F96153,#FF683F);
+    box-shadow: 0px 3px 10px 0px #f96153;
+}
+
+.error{
+    display: inline-block !important;
+    color: hsl(4, 100%, 67%) !important;
+    background-color: hsla(4, 100%, 67%, 0.171);
+
+}
+.container .mobile-img{
+    display: none;
+}
+
+.container .txt .input input{
+    font-size: 16px;
+    padding: 15px;
+    width: 91%;
+    outline: none;
+    cursor: pointer;
+    border-radius: 7px;
+    border:1px solid  hsl(231, 7%, 60%);
+
+}
+
 
 .container .txt ul{
     display: flex;
@@ -63,4 +117,75 @@ body{
 
 .container .img img{
     height: 500px;
+}
+
+.container-success{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    padding: 50px;
+    border-radius: 30px;
+}
+
+.container-success img{
+    height: 80px;
+    width: 80px;
+}
+
+.container-success h1{
+    font-size: 50px;
+    color: hsl(234, 29%, 20%);
+    padding: 20px 0px;
+}
+
+.container-success p{
+    font-size: 16px;
+    color: hsl(234, 29%, 20%);
+    line-height: 25px;
+}
+
+.container-success p span{
+    color: hsl(234, 29%, 20%);
+    font-weight: 700;
+}
+
+.container-success button{
+    width: 100%;
+    margin: 20px 0px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 13px 0px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    color: hsl(0, 0%, 100%);
+    background-image: linear-gradient(45deg , #FF5771, #F96153,#FF683F);
+    box-shadow: 0px 3px 10px 0px #f96153;
+}
+
+@media screen and  (max-width: 375px){
+
+    .container{
+        flex-direction: column-reverse;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .container .txt{
+        justify-content: center;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+    }
+   .container .img img{
+    display: none;
+    height: 0px;
+   }
+   .container .img .mobile-img{
+    display: block;
+    width: 100vw;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+   }
 }
